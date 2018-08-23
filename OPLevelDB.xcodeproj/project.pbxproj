@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E42EE1A212E8B3400D5ED2A /* OPLevelDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E42EE10212E8B3300D5ED2A /* OPLevelDB.framework */; };
+		3E42EE1F212E8B3400D5ED2A /* OPLevelDBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE1E212E8B3400D5ED2A /* OPLevelDBTests.m */; };
+		3E42EE21212E8B3400D5ED2A /* OPLevelDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE13212E8B3300D5ED2A /* OPLevelDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E42EE31212E8C3700D5ED2A /* OPLevelDB.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2A212E8C3600D5ED2A /* OPLevelDB.mm */; };
+		3E42EE32212E8C3700D5ED2A /* OPLevelDBIteratorItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE2B212E8C3600D5ED2A /* OPLevelDBIteratorItem.h */; };
+		3E42EE33212E8C3700D5ED2A /* OPLevelDBWriteBatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE2C212E8C3600D5ED2A /* OPLevelDBWriteBatch.h */; };
+		3E42EE34212E8C3700D5ED2A /* OPLevelDBIteratorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2D212E8C3700D5ED2A /* OPLevelDBIteratorItem.m */; };
+		3E42EE35212E8C3700D5ED2A /* OPLevelDBWriteBatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2E212E8C3700D5ED2A /* OPLevelDBWriteBatch.mm */; };
+		3E42EE36212E8C3700D5ED2A /* OPLevelDBHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2F212E8C3700D5ED2A /* OPLevelDBHelper.mm */; };
+		3E42EE37212E8C3700D5ED2A /* OPLevelDBHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE30212E8C3700D5ED2A /* OPLevelDBHelper.h */; };
+		3E42EE4B212E8CDF00D5ED2A /* env.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE3B212E8CDE00D5ED2A /* env.h */; };
+		3E42EE4C212E8CDF00D5ED2A /* status.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE3C212E8CDE00D5ED2A /* status.h */; };
+		3E42EE4D212E8CDF00D5ED2A /* db.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE3D212E8CDE00D5ED2A /* db.h */; };
+		3E42EE4E212E8CDF00D5ED2A /* slice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE3E212E8CDE00D5ED2A /* slice.h */; };
+		3E42EE4F212E8CDF00D5ED2A /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE3F212E8CDE00D5ED2A /* cache.h */; };
+		3E42EE50212E8CDF00D5ED2A /* write_batch.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE40212E8CDE00D5ED2A /* write_batch.h */; };
+		3E42EE51212E8CDF00D5ED2A /* options.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE41212E8CDE00D5ED2A /* options.h */; };
+		3E42EE52212E8CDF00D5ED2A /* dumpfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE42212E8CDE00D5ED2A /* dumpfile.h */; };
+		3E42EE53212E8CDF00D5ED2A /* c.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE43212E8CDE00D5ED2A /* c.h */; };
+		3E42EE54212E8CDF00D5ED2A /* filter_policy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE44212E8CDE00D5ED2A /* filter_policy.h */; };
+		3E42EE55212E8CDF00D5ED2A /* comparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE45212E8CDE00D5ED2A /* comparator.h */; };
+		3E42EE56212E8CDF00D5ED2A /* table.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE46212E8CDE00D5ED2A /* table.h */; };
+		3E42EE57212E8CDF00D5ED2A /* table_builder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE47212E8CDE00D5ED2A /* table_builder.h */; };
+		3E42EE58212E8CDF00D5ED2A /* iterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE48212E8CDE00D5ED2A /* iterator.h */; };
+		3E42EE59212E8CDF00D5ED2A /* libleveldb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E42EE4A212E8CDE00D5ED2A /* libleveldb.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E42EE1B212E8B3400D5ED2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E42EE07212E8B3300D5ED2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E42EE0F212E8B3300D5ED2A;
+			remoteInfo = OPLevelDB;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E42EE10212E8B3300D5ED2A /* OPLevelDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OPLevelDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E42EE13212E8B3300D5ED2A /* OPLevelDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPLevelDB.h; sourceTree = "<group>"; };
+		3E42EE14212E8B3300D5ED2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E42EE19212E8B3400D5ED2A /* OPLevelDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OPLevelDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E42EE1E212E8B3400D5ED2A /* OPLevelDBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPLevelDBTests.m; sourceTree = "<group>"; };
+		3E42EE20212E8B3400D5ED2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E42EE2A212E8C3600D5ED2A /* OPLevelDB.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OPLevelDB.mm; sourceTree = "<group>"; };
+		3E42EE2B212E8C3600D5ED2A /* OPLevelDBIteratorItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPLevelDBIteratorItem.h; sourceTree = "<group>"; };
+		3E42EE2C212E8C3600D5ED2A /* OPLevelDBWriteBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPLevelDBWriteBatch.h; sourceTree = "<group>"; };
+		3E42EE2D212E8C3700D5ED2A /* OPLevelDBIteratorItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPLevelDBIteratorItem.m; sourceTree = "<group>"; };
+		3E42EE2E212E8C3700D5ED2A /* OPLevelDBWriteBatch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OPLevelDBWriteBatch.mm; sourceTree = "<group>"; };
+		3E42EE2F212E8C3700D5ED2A /* OPLevelDBHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OPLevelDBHelper.mm; sourceTree = "<group>"; };
+		3E42EE30212E8C3700D5ED2A /* OPLevelDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPLevelDBHelper.h; sourceTree = "<group>"; };
+		3E42EE3B212E8CDE00D5ED2A /* env.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = env.h; sourceTree = "<group>"; };
+		3E42EE3C212E8CDE00D5ED2A /* status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = status.h; sourceTree = "<group>"; };
+		3E42EE3D212E8CDE00D5ED2A /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
+		3E42EE3E212E8CDE00D5ED2A /* slice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slice.h; sourceTree = "<group>"; };
+		3E42EE3F212E8CDE00D5ED2A /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
+		3E42EE40212E8CDE00D5ED2A /* write_batch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = write_batch.h; sourceTree = "<group>"; };
+		3E42EE41212E8CDE00D5ED2A /* options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = options.h; sourceTree = "<group>"; };
+		3E42EE42212E8CDE00D5ED2A /* dumpfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dumpfile.h; sourceTree = "<group>"; };
+		3E42EE43212E8CDE00D5ED2A /* c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
+		3E42EE44212E8CDE00D5ED2A /* filter_policy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filter_policy.h; sourceTree = "<group>"; };
+		3E42EE45212E8CDE00D5ED2A /* comparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comparator.h; sourceTree = "<group>"; };
+		3E42EE46212E8CDE00D5ED2A /* table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = table.h; sourceTree = "<group>"; };
+		3E42EE47212E8CDE00D5ED2A /* table_builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = table_builder.h; sourceTree = "<group>"; };
+		3E42EE48212E8CDE00D5ED2A /* iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iterator.h; sourceTree = "<group>"; };
+		3E42EE4A212E8CDE00D5ED2A /* libleveldb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libleveldb.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E42EE0C212E8B3300D5ED2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E42EE59212E8CDF00D5ED2A /* libleveldb.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E42EE16212E8B3400D5ED2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E42EE1A212E8B3400D5ED2A /* OPLevelDB.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E42EE06212E8B3300D5ED2A = {
+			isa = PBXGroup;
+			children = (
+				3E42EE12212E8B3300D5ED2A /* OPLevelDB */,
+				3E42EE1D212E8B3400D5ED2A /* OPLevelDBTests */,
+				3E42EE11212E8B3300D5ED2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E42EE11212E8B3300D5ED2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E42EE10212E8B3300D5ED2A /* OPLevelDB.framework */,
+				3E42EE19212E8B3400D5ED2A /* OPLevelDBTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E42EE12212E8B3300D5ED2A /* OPLevelDB */ = {
+			isa = PBXGroup;
+			children = (
+				3E42EE38212E8CDE00D5ED2A /* leveldb */,
+				3E42EE13212E8B3300D5ED2A /* OPLevelDB.h */,
+				3E42EE2A212E8C3600D5ED2A /* OPLevelDB.mm */,
+				3E42EE30212E8C3700D5ED2A /* OPLevelDBHelper.h */,
+				3E42EE2F212E8C3700D5ED2A /* OPLevelDBHelper.mm */,
+				3E42EE2B212E8C3600D5ED2A /* OPLevelDBIteratorItem.h */,
+				3E42EE2D212E8C3700D5ED2A /* OPLevelDBIteratorItem.m */,
+				3E42EE2C212E8C3600D5ED2A /* OPLevelDBWriteBatch.h */,
+				3E42EE2E212E8C3700D5ED2A /* OPLevelDBWriteBatch.mm */,
+				3E42EE14212E8B3300D5ED2A /* Info.plist */,
+			);
+			path = OPLevelDB;
+			sourceTree = "<group>";
+		};
+		3E42EE1D212E8B3400D5ED2A /* OPLevelDBTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E42EE1E212E8B3400D5ED2A /* OPLevelDBTests.m */,
+				3E42EE20212E8B3400D5ED2A /* Info.plist */,
+			);
+			path = OPLevelDBTests;
+			sourceTree = "<group>";
+		};
+		3E42EE38212E8CDE00D5ED2A /* leveldb */ = {
+			isa = PBXGroup;
+			children = (
+				3E42EE39212E8CDE00D5ED2A /* include */,
+				3E42EE49212E8CDE00D5ED2A /* lib */,
+			);
+			path = leveldb;
+			sourceTree = "<group>";
+		};
+		3E42EE39212E8CDE00D5ED2A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3E42EE3A212E8CDE00D5ED2A /* leveldb */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		3E42EE3A212E8CDE00D5ED2A /* leveldb */ = {
+			isa = PBXGroup;
+			children = (
+				3E42EE3B212E8CDE00D5ED2A /* env.h */,
+				3E42EE3C212E8CDE00D5ED2A /* status.h */,
+				3E42EE3D212E8CDE00D5ED2A /* db.h */,
+				3E42EE3E212E8CDE00D5ED2A /* slice.h */,
+				3E42EE3F212E8CDE00D5ED2A /* cache.h */,
+				3E42EE40212E8CDE00D5ED2A /* write_batch.h */,
+				3E42EE41212E8CDE00D5ED2A /* options.h */,
+				3E42EE42212E8CDE00D5ED2A /* dumpfile.h */,
+				3E42EE43212E8CDE00D5ED2A /* c.h */,
+				3E42EE44212E8CDE00D5ED2A /* filter_policy.h */,
+				3E42EE45212E8CDE00D5ED2A /* comparator.h */,
+				3E42EE46212E8CDE00D5ED2A /* table.h */,
+				3E42EE47212E8CDE00D5ED2A /* table_builder.h */,
+				3E42EE48212E8CDE00D5ED2A /* iterator.h */,
+			);
+			path = leveldb;
+			sourceTree = "<group>";
+		};
+		3E42EE49212E8CDE00D5ED2A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				3E42EE4A212E8CDE00D5ED2A /* libleveldb.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3E42EE0D212E8B3300D5ED2A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E42EE54212E8CDF00D5ED2A /* filter_policy.h in Headers */,
+				3E42EE4F212E8CDF00D5ED2A /* cache.h in Headers */,
+				3E42EE50212E8CDF00D5ED2A /* write_batch.h in Headers */,
+				3E42EE37212E8C3700D5ED2A /* OPLevelDBHelper.h in Headers */,
+				3E42EE53212E8CDF00D5ED2A /* c.h in Headers */,
+				3E42EE56212E8CDF00D5ED2A /* table.h in Headers */,
+				3E42EE33212E8C3700D5ED2A /* OPLevelDBWriteBatch.h in Headers */,
+				3E42EE57212E8CDF00D5ED2A /* table_builder.h in Headers */,
+				3E42EE58212E8CDF00D5ED2A /* iterator.h in Headers */,
+				3E42EE4C212E8CDF00D5ED2A /* status.h in Headers */,
+				3E42EE4B212E8CDF00D5ED2A /* env.h in Headers */,
+				3E42EE51212E8CDF00D5ED2A /* options.h in Headers */,
+				3E42EE21212E8B3400D5ED2A /* OPLevelDB.h in Headers */,
+				3E42EE4E212E8CDF00D5ED2A /* slice.h in Headers */,
+				3E42EE55212E8CDF00D5ED2A /* comparator.h in Headers */,
+				3E42EE32212E8C3700D5ED2A /* OPLevelDBIteratorItem.h in Headers */,
+				3E42EE52212E8CDF00D5ED2A /* dumpfile.h in Headers */,
+				3E42EE4D212E8CDF00D5ED2A /* db.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3E42EE0F212E8B3300D5ED2A /* OPLevelDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E42EE24212E8B3400D5ED2A /* Build configuration list for PBXNativeTarget "OPLevelDB" */;
+			buildPhases = (
+				3E42EE0B212E8B3300D5ED2A /* Sources */,
+				3E42EE0C212E8B3300D5ED2A /* Frameworks */,
+				3E42EE0D212E8B3300D5ED2A /* Headers */,
+				3E42EE0E212E8B3300D5ED2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OPLevelDB;
+			productName = OPLevelDB;
+			productReference = 3E42EE10212E8B3300D5ED2A /* OPLevelDB.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3E42EE18212E8B3400D5ED2A /* OPLevelDBTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E42EE27212E8B3400D5ED2A /* Build configuration list for PBXNativeTarget "OPLevelDBTests" */;
+			buildPhases = (
+				3E42EE15212E8B3400D5ED2A /* Sources */,
+				3E42EE16212E8B3400D5ED2A /* Frameworks */,
+				3E42EE17212E8B3400D5ED2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E42EE1C212E8B3400D5ED2A /* PBXTargetDependency */,
+			);
+			name = OPLevelDBTests;
+			productName = OPLevelDBTests;
+			productReference = 3E42EE19212E8B3400D5ED2A /* OPLevelDBTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E42EE07212E8B3300D5ED2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = sunboshi;
+				TargetAttributes = {
+					3E42EE0F212E8B3300D5ED2A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					3E42EE18212E8B3400D5ED2A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 3E42EE0A212E8B3300D5ED2A /* Build configuration list for PBXProject "OPLevelDB" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3E42EE06212E8B3300D5ED2A;
+			productRefGroup = 3E42EE11212E8B3300D5ED2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E42EE0F212E8B3300D5ED2A /* OPLevelDB */,
+				3E42EE18212E8B3400D5ED2A /* OPLevelDBTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E42EE0E212E8B3300D5ED2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E42EE17212E8B3400D5ED2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E42EE0B212E8B3300D5ED2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E42EE35212E8C3700D5ED2A /* OPLevelDBWriteBatch.mm in Sources */,
+				3E42EE34212E8C3700D5ED2A /* OPLevelDBIteratorItem.m in Sources */,
+				3E42EE31212E8C3700D5ED2A /* OPLevelDB.mm in Sources */,
+				3E42EE36212E8C3700D5ED2A /* OPLevelDBHelper.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E42EE15212E8B3400D5ED2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E42EE1F212E8B3400D5ED2A /* OPLevelDBTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E42EE1C212E8B3400D5ED2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E42EE0F212E8B3300D5ED2A /* OPLevelDB */;
+			targetProxy = 3E42EE1B212E8B3400D5ED2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3E42EE22212E8B3400D5ED2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3E42EE23212E8B3400D5ED2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E42EE25212E8B3400D5ED2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OPLevelDB/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OPLevelDB/leveldb/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.sunboshi.OPLevelDB;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OPLevelDB/leveldb/include";
+			};
+			name = Debug;
+		};
+		3E42EE26212E8B3400D5ED2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OPLevelDB/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OPLevelDB/leveldb/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.sunboshi.OPLevelDB;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OPLevelDB/leveldb/include";
+			};
+			name = Release;
+		};
+		3E42EE28212E8B3400D5ED2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OPLevelDBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.sunboshi.OPLevelDBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E42EE29212E8B3400D5ED2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OPLevelDBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.sunboshi.OPLevelDBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E42EE0A212E8B3300D5ED2A /* Build configuration list for PBXProject "OPLevelDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E42EE22212E8B3400D5ED2A /* Debug */,
+				3E42EE23212E8B3400D5ED2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E42EE24212E8B3400D5ED2A /* Build configuration list for PBXNativeTarget "OPLevelDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E42EE25212E8B3400D5ED2A /* Debug */,
+				3E42EE26212E8B3400D5ED2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E42EE27212E8B3400D5ED2A /* Build configuration list for PBXNativeTarget "OPLevelDBTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E42EE28212E8B3400D5ED2A /* Debug */,
+				3E42EE29212E8B3400D5ED2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E42EE07212E8B3300D5ED2A /* Project object */;
+}
