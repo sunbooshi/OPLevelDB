@@ -15,6 +15,9 @@ Objc wrapper for leveldb.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'OPLevelDB/*', 'OPLevelDB/leveldb/include/leveldb/*'
+  s.public_header_files = 'OPLevelDB/*.h'
+
+  s.compiler_flags = '-lc++'
 
   s.preserve_paths = 'OPLevelDB/leveldb/lib/libleveldb.a'
   s.vendored_library = 'OPLevelDB/leveldb/lib/libleveldb.a'
