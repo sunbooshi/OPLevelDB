@@ -17,7 +17,7 @@ Objc wrapper for leveldb.
   s.source_files = 'OPLevelDB/*', 'OPLevelDB/leveldb/include/leveldb/*'
   s.public_header_files = 'OPLevelDB/*.h'
 
-  s.compiler_flags = '-lc++'
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lc++' }
 
   s.preserve_paths = 'OPLevelDB/leveldb/lib/libleveldb.a'
   s.vendored_library = 'OPLevelDB/leveldb/lib/libleveldb.a'
