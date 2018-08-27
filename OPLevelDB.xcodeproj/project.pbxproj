@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E22DBF42133F4FA00EA0D77 /* OPLevelDB.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2A212E8C3600D5ED2A /* OPLevelDB.mm */; };
+		3E22DBF52133F4FA00EA0D77 /* OPLevelDBHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2F212E8C3700D5ED2A /* OPLevelDBHelper.mm */; };
+		3E22DBF62133F4FA00EA0D77 /* OPLevelDBIteratorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2D212E8C3700D5ED2A /* OPLevelDBIteratorItem.m */; };
+		3E22DBF72133F4FA00EA0D77 /* OPLevelDBWriteBatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2E212E8C3700D5ED2A /* OPLevelDBWriteBatch.mm */; };
+		3E22DBF82133F5BB00EA0D77 /* libleveldb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E42EE4A212E8CDE00D5ED2A /* libleveldb.a */; };
 		3E42EE1A212E8B3400D5ED2A /* OPLevelDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E42EE10212E8B3300D5ED2A /* OPLevelDB.framework */; };
 		3E42EE1F212E8B3400D5ED2A /* OPLevelDBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE1E212E8B3400D5ED2A /* OPLevelDBTests.m */; };
 		3E42EE21212E8B3400D5ED2A /* OPLevelDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE13212E8B3300D5ED2A /* OPLevelDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E22DBF82133F5BB00EA0D77 /* libleveldb.a in Frameworks */,
 				3E42EE1A212E8B3400D5ED2A /* OPLevelDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +326,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E22DBF62133F4FA00EA0D77 /* OPLevelDBIteratorItem.m in Sources */,
+				3E22DBF72133F4FA00EA0D77 /* OPLevelDBWriteBatch.mm in Sources */,
 				3E42EE1F212E8B3400D5ED2A /* OPLevelDBTests.m in Sources */,
+				3E22DBF42133F4FA00EA0D77 /* OPLevelDB.mm in Sources */,
+				3E22DBF52133F4FA00EA0D77 /* OPLevelDBHelper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +520,7 @@
 		3E42EE28212E8B3400D5ED2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OPLevelDBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -517,15 +528,21 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OPLevelDB/leveldb/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = tech.sunboshi.OPLevelDBTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OPLevelDB/leveldb/include";
 			};
 			name = Debug;
 		};
 		3E42EE29212E8B3400D5ED2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OPLevelDBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -533,9 +550,14 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OPLevelDB/leveldb/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = tech.sunboshi.OPLevelDBTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OPLevelDB/leveldb/include";
 			};
 			name = Release;
 		};
