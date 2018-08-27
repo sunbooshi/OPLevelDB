@@ -98,14 +98,6 @@ NSString * const OPLevelDBErrorDomain = @"tech.sunboshi.leveldb";
     return nil;
 }
 
-- (NSError *)checkDB {
-    if (_db == NULL) {
-        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: @"Database not initialize or been destroyed.", NSLocalizedFailureReasonErrorKey:  @"Database not initialize or been destroyed."};
-        return [NSError errorWithDomain:OPLevelDBErrorDomain code:OPLevelDBErrorCodeDBNotInit userInfo:userInfo];
-    }
-    return nil;
-}
-
 - (NSError *)putObject:(id)obj forKey:(NSString *)key {
     return [self putObject:obj forKey:key sync:NO];
 }
@@ -115,10 +107,6 @@ NSString * const OPLevelDBErrorDomain = @"tech.sunboshi.leveldb";
 }
 
 - (NSError *)putObject:(id)obj forKey:(NSString *)key sync:(BOOL)sync {
-    if (NSError * err = [self checkDB]) {
-        return err;
-    }
-    
     leveldb::WriteOptions wo;
     wo.sync = sync ? true : false;
     
@@ -127,7 +115,7 @@ NSString * const OPLevelDBErrorDomain = @"tech.sunboshi.leveldb";
     
     leveldb::Status status = _db->Put(wo, k, v);
     
-    return [OPLevelDB errorFromStatus:status desc:[NSString stringWithFormat:@"get key [%@] error", key]];
+    return [OPLevelDB errorFromStatus:status desc:[NSString stringWithFormat:@"put object error, key=[%@].", key]];
 }
 
 - (NSError *)deleteObjectForKey:(NSString *)key {
@@ -139,32 +127,23 @@ NSString * const OPLevelDBErrorDomain = @"tech.sunboshi.leveldb";
 }
 
 - (NSError *)deleteObjectForKey:(NSString *)key sync:(BOOL)sync {
-    if (NSError * err = [self checkDB]) {
-        return err;
-    }
-    
     leveldb::WriteOptions wo;
     wo.sync = sync ? true : false;
     
     leveldb::Slice k = [OPLevelDBHelper stringToSlice:key];
     leveldb::Status status = _db->Delete(wo, k);
     
-    return [OPLevelDB errorFromStatus:status desc:[NSString stringWithFormat:@"delete key [%@] error", key]];
+    return [OPLevelDB errorFromStatus:status desc:[NSString stringWithFormat:@"delete object error, key=[%@].", key]];
 }
 
 - (id)getObjectForKey:(NSString *)key error:(NSError **)error {
-    if (NSError * err = [self checkDB]) {
-        *error = err;
-        return nil;
-    }
-    
     leveldb::ReadOptions ro;
     std::string val;
     
     leveldb::Slice k = [OPLevelDBHelper stringToSlice:key];
     leveldb::Status status = _db->Get(ro, k, &val);
     
-    NSError *err = [OPLevelDB errorFromStatus:status desc:[NSString stringWithFormat:@"get key [%@] error", key]];
+    NSError *err = [OPLevelDB errorFromStatus:status desc:[NSString stringWithFormat:@"get object error, key=[%@].", key]];
     if (err) {
         if (error != nil) *error = err;
     }
@@ -175,43 +154,55 @@ NSString * const OPLevelDBErrorDomain = @"tech.sunboshi.leveldb";
     return nil;
 }
 
-- (NSError *)deleteObject:(NSString *)key {
-    return [self deleteObject:key sync:YES];
-}
-
-- (NSError *)deleteObject:(NSString *)key sync:(BOOL)sync {
-    if (NSError *err = [self checkDB]) {
-        return err;
-    }
-    
-    leveldb::WriteOptions wo;
-    wo.sync = sync ? true : false;
-    
-    leveldb::Slice k = [OPLevelDBHelper stringToSlice:key];
-    leveldb::Status status = _db->Delete(wo, k);
-    
-    return [OPLevelDB errorFromStatus:status desc:[NSString stringWithFormat:@"del key [%@] error", key]];
-}
-
 - (NSError *)writeBatch:(OPLevelDBWriteBatch *)writeBatch {
-    if (NSError *err = [self checkDB]) {
-        return err;
-    }
-    
     leveldb::WriteOptions wo;
     leveldb::WriteBatch *wb = (leveldb::WriteBatch *)[writeBatch getWriteBatch];
     leveldb::Status status = _db->Write(wo, wb);
     return [OPLevelDB errorFromStatus:status desc:nil];
 }
 
+- (NSError *)putString:(NSString *)str forKey:(NSString *)key {
+    return [self putString:str forKey:key sync:NO];
+}
+
+- (NSError *)putStringSync:(NSString *)str forKey:(NSString *)key {
+    return [self putString:str forKey:key sync:YES];
+}
+
+- (NSError *)putString:(NSString *)str forKey:(NSString *)key sync:(BOOL)sync {
+    leveldb::WriteOptions wo;
+    wo.sync = sync ? true : false;
+    
+    leveldb::Slice k = [OPLevelDBHelper stringToSlice:key];
+    leveldb::Slice v = [OPLevelDBHelper stringToSlice:str];
+    
+    leveldb::Status status = _db->Put(wo, k, v);
+    
+    return [OPLevelDB errorFromStatus:status desc:[NSString stringWithFormat:@"put string error, key=[%@].", key]];
+}
+
+- (NSString *)getStringForKey:(NSString *)key error:(NSError **)error {
+    leveldb::ReadOptions ro;
+    std::string val;
+    
+    leveldb::Slice k = [OPLevelDBHelper stringToSlice:key];
+    leveldb::Status status = _db->Get(ro, k, &val);
+    
+    NSError *err = [OPLevelDB errorFromStatus:status desc:[NSString stringWithFormat:@"get string error, key=[%@].", key]];
+    if (err) {
+        if (error != nil) *error = err;
+    }
+    else {
+        return [NSString stringWithCString:val.c_str() encoding:NSUTF8StringEncoding];
+    }
+    
+    return nil;
+}
+
 #pragma makr -
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
                                   objects:(id  _Nullable __unsafe_unretained [])buffer
                                     count:(NSUInteger)len {
-    if (_db == NULL) {
-        return 0;
-    }
-    
     if (state->state == 0) {
         if (_iterator != NULL) {
             delete _iterator;

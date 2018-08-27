@@ -25,7 +25,11 @@
 
 + (id)objectFromSlice:(leveldb::Slice)slice {
     NSData *data = [NSData dataWithBytes:slice.data() length:slice.size()];
-    return [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    id obj = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    if (obj == nil) {
+        return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    }
+    return nil;
 }
 
 @end

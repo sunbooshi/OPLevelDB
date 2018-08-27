@@ -25,8 +25,7 @@ NS_ERROR_ENUM(OPLevelDBErrorDomain)
     OPLevelDBErrorCodeCorruption        = 1052,
     OPLevelDBErrorCodeNotSupported      = 1053,
     OPLevelDBErrorCodeInvalidArgument   = 1054,
-    OPLevelDBErrorCodeIOError           = 1055,
-    OPLevelDBErrorCodeDBNotInit         = 1056
+    OPLevelDBErrorCodeIOError           = 1055
 };
 
 @interface OPLevelDB : NSObject<NSFastEnumeration>
@@ -36,9 +35,9 @@ NS_ERROR_ENUM(OPLevelDBErrorDomain)
 
 + (NSError *)destroyDB:(NSString *)path;
 
-- (NSError *)putObject:(id)obj forKey:(NSString *)key;
+- (NSError *)putObject:(id<NSCoding>)obj forKey:(NSString *)key;
 
-- (NSError *)putObjectSync:(id)obj forKey:(NSString *)key;
+- (NSError *)putObjectSync:(id<NSCoding>)obj forKey:(NSString *)key;
 
 - (NSError *)putObject:(id<NSCoding>)obj forKey:(NSString *)key sync:(BOOL)sync;
 
@@ -51,6 +50,14 @@ NS_ERROR_ENUM(OPLevelDBErrorDomain)
 - (id)getObjectForKey:(NSString *)key error:(NSError **)error;
 
 - (NSError *)writeBatch:(OPLevelDBWriteBatch *)writeBatch;
+
+- (NSError *)putString:(NSString *)str forKey:(NSString *)key;
+
+- (NSError *)putStringSync:(NSString *)str forKey:(NSString *)key;
+
+- (NSError *)putString:(NSString *)str forKey:(NSString *)key sync:(BOOL)sync;
+
+- (NSString *)getStringForKey:(NSString *)key error:(NSError **)error;
 
 @end
 
