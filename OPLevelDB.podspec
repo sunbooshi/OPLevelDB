@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary          = 'Objc wrapper for leveldb.'
 
   s.description      = <<-DESC
-Objc wrapper for leveldb.
+Objc wrapper for leveldb use leveldb-library 1.20.
                        DESC
 
   s.homepage         = 'https://github.com/sunboshi/OPLevelDB'
