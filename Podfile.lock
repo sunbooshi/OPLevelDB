@@ -1,0 +1,16 @@
+PODS:
+  - leveldb-library (1.20)
+
+DEPENDENCIES:
+  - leveldb-library (~> 1.20)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - leveldb-library
+
+SPEC CHECKSUMS:
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+
+PODFILE CHECKSUM: 58c1f973a15a3c3edbe51f4b29ed55954840029c
+
+COCOAPODS: 1.5.3
