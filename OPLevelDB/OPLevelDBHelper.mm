@@ -29,7 +29,7 @@
     if (obj == nil) {
         return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     }
-    return nil;
+    return obj;
 }
 
 @end

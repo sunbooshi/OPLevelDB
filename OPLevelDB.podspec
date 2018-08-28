@@ -1,3 +1,4 @@
+
 Pod::Spec.new do |s|
   s.name             = 'OPLevelDB'
   s.version          = '0.1.0'
@@ -14,14 +15,11 @@ Objc wrapper for leveldb.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'OPLevelDB/*', 'OPLevelDB/leveldb/include/leveldb/*'
-  s.public_header_files = 'OPLevelDB/*.h'
+  s.public_header_files = 'OPLevelDB/OPLevelDB.h', 'OPLevelDB/OPLevelDBIteratorItem.h', 'OPLevelDB/OPLevelDBWriteBatch.h'
+  s.source_files = 'OPLevelDB/*'
 
-  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lc++' }
+  s.header_dir = 'OPLevelDB'
 
-  s.preserve_paths = 'OPLevelDB/leveldb/lib/libleveldb.a'
-  s.vendored_library = 'OPLevelDB/leveldb/lib/libleveldb.a'
-
-  s.header_dir = 'leveldb'
+  s.dependency 'leveldb-library', '= 1.20'
 
 end

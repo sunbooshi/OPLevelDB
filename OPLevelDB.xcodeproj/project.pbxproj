@@ -11,7 +11,6 @@
 		3E22DBF52133F4FA00EA0D77 /* OPLevelDBHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2F212E8C3700D5ED2A /* OPLevelDBHelper.mm */; };
 		3E22DBF62133F4FA00EA0D77 /* OPLevelDBIteratorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2D212E8C3700D5ED2A /* OPLevelDBIteratorItem.m */; };
 		3E22DBF72133F4FA00EA0D77 /* OPLevelDBWriteBatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2E212E8C3700D5ED2A /* OPLevelDBWriteBatch.mm */; };
-		3E22DBF82133F5BB00EA0D77 /* libleveldb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E42EE4A212E8CDE00D5ED2A /* libleveldb.a */; };
 		3E42EE1A212E8B3400D5ED2A /* OPLevelDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E42EE10212E8B3300D5ED2A /* OPLevelDB.framework */; };
 		3E42EE1F212E8B3400D5ED2A /* OPLevelDBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE1E212E8B3400D5ED2A /* OPLevelDBTests.m */; };
 		3E42EE21212E8B3400D5ED2A /* OPLevelDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE13212E8B3300D5ED2A /* OPLevelDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,21 +21,8 @@
 		3E42EE35212E8C3700D5ED2A /* OPLevelDBWriteBatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2E212E8C3700D5ED2A /* OPLevelDBWriteBatch.mm */; };
 		3E42EE36212E8C3700D5ED2A /* OPLevelDBHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E42EE2F212E8C3700D5ED2A /* OPLevelDBHelper.mm */; };
 		3E42EE37212E8C3700D5ED2A /* OPLevelDBHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE30212E8C3700D5ED2A /* OPLevelDBHelper.h */; };
-		3E42EE4B212E8CDF00D5ED2A /* env.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE3B212E8CDE00D5ED2A /* env.h */; };
-		3E42EE4C212E8CDF00D5ED2A /* status.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE3C212E8CDE00D5ED2A /* status.h */; };
-		3E42EE4D212E8CDF00D5ED2A /* db.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE3D212E8CDE00D5ED2A /* db.h */; };
-		3E42EE4E212E8CDF00D5ED2A /* slice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE3E212E8CDE00D5ED2A /* slice.h */; };
-		3E42EE4F212E8CDF00D5ED2A /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE3F212E8CDE00D5ED2A /* cache.h */; };
-		3E42EE50212E8CDF00D5ED2A /* write_batch.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE40212E8CDE00D5ED2A /* write_batch.h */; };
-		3E42EE51212E8CDF00D5ED2A /* options.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE41212E8CDE00D5ED2A /* options.h */; };
-		3E42EE52212E8CDF00D5ED2A /* dumpfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE42212E8CDE00D5ED2A /* dumpfile.h */; };
-		3E42EE53212E8CDF00D5ED2A /* c.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE43212E8CDE00D5ED2A /* c.h */; };
-		3E42EE54212E8CDF00D5ED2A /* filter_policy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE44212E8CDE00D5ED2A /* filter_policy.h */; };
-		3E42EE55212E8CDF00D5ED2A /* comparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE45212E8CDE00D5ED2A /* comparator.h */; };
-		3E42EE56212E8CDF00D5ED2A /* table.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE46212E8CDE00D5ED2A /* table.h */; };
-		3E42EE57212E8CDF00D5ED2A /* table_builder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE47212E8CDE00D5ED2A /* table_builder.h */; };
-		3E42EE58212E8CDF00D5ED2A /* iterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E42EE48212E8CDE00D5ED2A /* iterator.h */; };
-		3E42EE59212E8CDF00D5ED2A /* libleveldb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E42EE4A212E8CDE00D5ED2A /* libleveldb.a */; };
+		9726C3A396DB2D4481262FA9 /* libPods-OPLevelDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CC48D5BB4EABC83F864DC0 /* libPods-OPLevelDB.a */; };
+		E2083166A664355C3EFC32D9 /* libPods-OPLevelDB-OPLevelDBTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC1D528D44060E0D0DB577 /* libPods-OPLevelDB-OPLevelDBTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05DC1D528D44060E0D0DB577 /* libPods-OPLevelDB-OPLevelDBTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OPLevelDB-OPLevelDBTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E42EE10212E8B3300D5ED2A /* OPLevelDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OPLevelDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E42EE13212E8B3300D5ED2A /* OPLevelDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPLevelDB.h; sourceTree = "<group>"; };
 		3E42EE14212E8B3300D5ED2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,21 +50,11 @@
 		3E42EE2E212E8C3700D5ED2A /* OPLevelDBWriteBatch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OPLevelDBWriteBatch.mm; sourceTree = "<group>"; };
 		3E42EE2F212E8C3700D5ED2A /* OPLevelDBHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OPLevelDBHelper.mm; sourceTree = "<group>"; };
 		3E42EE30212E8C3700D5ED2A /* OPLevelDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPLevelDBHelper.h; sourceTree = "<group>"; };
-		3E42EE3B212E8CDE00D5ED2A /* env.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = env.h; sourceTree = "<group>"; };
-		3E42EE3C212E8CDE00D5ED2A /* status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = status.h; sourceTree = "<group>"; };
-		3E42EE3D212E8CDE00D5ED2A /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
-		3E42EE3E212E8CDE00D5ED2A /* slice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slice.h; sourceTree = "<group>"; };
-		3E42EE3F212E8CDE00D5ED2A /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
-		3E42EE40212E8CDE00D5ED2A /* write_batch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = write_batch.h; sourceTree = "<group>"; };
-		3E42EE41212E8CDE00D5ED2A /* options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = options.h; sourceTree = "<group>"; };
-		3E42EE42212E8CDE00D5ED2A /* dumpfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dumpfile.h; sourceTree = "<group>"; };
-		3E42EE43212E8CDE00D5ED2A /* c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
-		3E42EE44212E8CDE00D5ED2A /* filter_policy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filter_policy.h; sourceTree = "<group>"; };
-		3E42EE45212E8CDE00D5ED2A /* comparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comparator.h; sourceTree = "<group>"; };
-		3E42EE46212E8CDE00D5ED2A /* table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = table.h; sourceTree = "<group>"; };
-		3E42EE47212E8CDE00D5ED2A /* table_builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = table_builder.h; sourceTree = "<group>"; };
-		3E42EE48212E8CDE00D5ED2A /* iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iterator.h; sourceTree = "<group>"; };
-		3E42EE4A212E8CDE00D5ED2A /* libleveldb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libleveldb.a; sourceTree = "<group>"; };
+		CB853EBEEC42AE9D14D7021A /* Pods-OPLevelDB-OPLevelDBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OPLevelDB-OPLevelDBTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OPLevelDB-OPLevelDBTests/Pods-OPLevelDB-OPLevelDBTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D0BA677571FF80D14354932F /* Pods-OPLevelDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OPLevelDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-OPLevelDB/Pods-OPLevelDB.release.xcconfig"; sourceTree = "<group>"; };
+		D0CC48D5BB4EABC83F864DC0 /* libPods-OPLevelDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OPLevelDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D467FF1DED476A37FAC2F91B /* Pods-OPLevelDB-OPLevelDBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OPLevelDB-OPLevelDBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OPLevelDB-OPLevelDBTests/Pods-OPLevelDB-OPLevelDBTests.release.xcconfig"; sourceTree = "<group>"; };
+		F7945101B2E7B920DD9D3507 /* Pods-OPLevelDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OPLevelDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OPLevelDB/Pods-OPLevelDB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E42EE59212E8CDF00D5ED2A /* libleveldb.a in Frameworks */,
+				9726C3A396DB2D4481262FA9 /* libPods-OPLevelDB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E22DBF82133F5BB00EA0D77 /* libleveldb.a in Frameworks */,
 				3E42EE1A212E8B3400D5ED2A /* OPLevelDB.framework in Frameworks */,
+				E2083166A664355C3EFC32D9 /* libPods-OPLevelDB-OPLevelDBTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +84,8 @@
 				3E42EE12212E8B3300D5ED2A /* OPLevelDB */,
 				3E42EE1D212E8B3400D5ED2A /* OPLevelDBTests */,
 				3E42EE11212E8B3300D5ED2A /* Products */,
+				D72178E721459A41C3E0911A /* Pods */,
+				978CBFAF59C9F3193E5D4AE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,7 +101,6 @@
 		3E42EE12212E8B3300D5ED2A /* OPLevelDB */ = {
 			isa = PBXGroup;
 			children = (
-				3E42EE38212E8CDE00D5ED2A /* leveldb */,
 				3E42EE13212E8B3300D5ED2A /* OPLevelDB.h */,
 				3E42EE2A212E8C3600D5ED2A /* OPLevelDB.mm */,
 				3E42EE30212E8C3700D5ED2A /* OPLevelDBHelper.h */,
@@ -145,50 +123,24 @@
 			path = OPLevelDBTests;
 			sourceTree = "<group>";
 		};
-		3E42EE38212E8CDE00D5ED2A /* leveldb */ = {
+		978CBFAF59C9F3193E5D4AE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3E42EE39212E8CDE00D5ED2A /* include */,
-				3E42EE49212E8CDE00D5ED2A /* lib */,
+				D0CC48D5BB4EABC83F864DC0 /* libPods-OPLevelDB.a */,
+				05DC1D528D44060E0D0DB577 /* libPods-OPLevelDB-OPLevelDBTests.a */,
 			);
-			path = leveldb;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3E42EE39212E8CDE00D5ED2A /* include */ = {
+		D72178E721459A41C3E0911A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3E42EE3A212E8CDE00D5ED2A /* leveldb */,
+				F7945101B2E7B920DD9D3507 /* Pods-OPLevelDB.debug.xcconfig */,
+				D0BA677571FF80D14354932F /* Pods-OPLevelDB.release.xcconfig */,
+				CB853EBEEC42AE9D14D7021A /* Pods-OPLevelDB-OPLevelDBTests.debug.xcconfig */,
+				D467FF1DED476A37FAC2F91B /* Pods-OPLevelDB-OPLevelDBTests.release.xcconfig */,
 			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		3E42EE3A212E8CDE00D5ED2A /* leveldb */ = {
-			isa = PBXGroup;
-			children = (
-				3E42EE3B212E8CDE00D5ED2A /* env.h */,
-				3E42EE3C212E8CDE00D5ED2A /* status.h */,
-				3E42EE3D212E8CDE00D5ED2A /* db.h */,
-				3E42EE3E212E8CDE00D5ED2A /* slice.h */,
-				3E42EE3F212E8CDE00D5ED2A /* cache.h */,
-				3E42EE40212E8CDE00D5ED2A /* write_batch.h */,
-				3E42EE41212E8CDE00D5ED2A /* options.h */,
-				3E42EE42212E8CDE00D5ED2A /* dumpfile.h */,
-				3E42EE43212E8CDE00D5ED2A /* c.h */,
-				3E42EE44212E8CDE00D5ED2A /* filter_policy.h */,
-				3E42EE45212E8CDE00D5ED2A /* comparator.h */,
-				3E42EE46212E8CDE00D5ED2A /* table.h */,
-				3E42EE47212E8CDE00D5ED2A /* table_builder.h */,
-				3E42EE48212E8CDE00D5ED2A /* iterator.h */,
-			);
-			path = leveldb;
-			sourceTree = "<group>";
-		};
-		3E42EE49212E8CDE00D5ED2A /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				3E42EE4A212E8CDE00D5ED2A /* libleveldb.a */,
-			);
-			path = lib;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,24 +150,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E42EE54212E8CDF00D5ED2A /* filter_policy.h in Headers */,
-				3E42EE4F212E8CDF00D5ED2A /* cache.h in Headers */,
-				3E42EE50212E8CDF00D5ED2A /* write_batch.h in Headers */,
 				3E42EE37212E8C3700D5ED2A /* OPLevelDBHelper.h in Headers */,
-				3E42EE53212E8CDF00D5ED2A /* c.h in Headers */,
-				3E42EE56212E8CDF00D5ED2A /* table.h in Headers */,
 				3E42EE33212E8C3700D5ED2A /* OPLevelDBWriteBatch.h in Headers */,
-				3E42EE57212E8CDF00D5ED2A /* table_builder.h in Headers */,
-				3E42EE58212E8CDF00D5ED2A /* iterator.h in Headers */,
-				3E42EE4C212E8CDF00D5ED2A /* status.h in Headers */,
-				3E42EE4B212E8CDF00D5ED2A /* env.h in Headers */,
-				3E42EE51212E8CDF00D5ED2A /* options.h in Headers */,
 				3E42EE21212E8B3400D5ED2A /* OPLevelDB.h in Headers */,
-				3E42EE4E212E8CDF00D5ED2A /* slice.h in Headers */,
-				3E42EE55212E8CDF00D5ED2A /* comparator.h in Headers */,
 				3E42EE32212E8C3700D5ED2A /* OPLevelDBIteratorItem.h in Headers */,
-				3E42EE52212E8CDF00D5ED2A /* dumpfile.h in Headers */,
-				3E42EE4D212E8CDF00D5ED2A /* db.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +164,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E42EE24212E8B3400D5ED2A /* Build configuration list for PBXNativeTarget "OPLevelDB" */;
 			buildPhases = (
+				41EE9C3CE5B67B7BEC137BE7 /* [CP] Check Pods Manifest.lock */,
 				3E42EE0B212E8B3300D5ED2A /* Sources */,
 				3E42EE0C212E8B3300D5ED2A /* Frameworks */,
 				3E42EE0D212E8B3300D5ED2A /* Headers */,
@@ -244,6 +183,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E42EE27212E8B3400D5ED2A /* Build configuration list for PBXNativeTarget "OPLevelDBTests" */;
 			buildPhases = (
+				CF07E33D413255361F0D60A7 /* [CP] Check Pods Manifest.lock */,
 				3E42EE15212E8B3400D5ED2A /* Sources */,
 				3E42EE16212E8B3400D5ED2A /* Frameworks */,
 				3E42EE17212E8B3400D5ED2A /* Resources */,
@@ -309,6 +249,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41EE9C3CE5B67B7BEC137BE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OPLevelDB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF07E33D413255361F0D60A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OPLevelDB-OPLevelDBTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E42EE0B212E8B3300D5ED2A /* Sources */ = {
@@ -463,6 +442,7 @@
 		};
 		3E42EE25212E8B3400D5ED2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7945101B2E7B920DD9D3507 /* Pods-OPLevelDB.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -477,20 +457,18 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/OPLevelDB/leveldb/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.sunboshi.OPLevelDB;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OPLevelDB/leveldb/include";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		3E42EE26212E8B3400D5ED2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0BA677571FF80D14354932F /* Pods-OPLevelDB.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -505,20 +483,18 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/OPLevelDB/leveldb/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.sunboshi.OPLevelDB;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OPLevelDB/leveldb/include";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
 		3E42EE28212E8B3400D5ED2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB853EBEEC42AE9D14D7021A /* Pods-OPLevelDB-OPLevelDBTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +517,7 @@
 		};
 		3E42EE29212E8B3400D5ED2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D467FF1DED476A37FAC2F91B /* Pods-OPLevelDB-OPLevelDBTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
